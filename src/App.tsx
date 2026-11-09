@@ -1,4 +1,5 @@
 import { Header } from './components/Header'
+import { RegisterForm } from './components/RegisterForm'
 import './App.css'
 import { ProductList } from './components/ProductList'
 import { useGetProductsQuery } from './api/baseApi'
@@ -8,6 +9,7 @@ function App() {
   return(
     <main>
       <Header title='product Catalog' description='НАШ ПЕРШИЙ REACT ПРОЕКТ + TYPE SCRIPT'/>
+      <RegisterForm />
       {isLoading && <p>Завантаження товарів...</p>} 
       {isError && <p>Не вдалося завантажити товари</p>}
       {!isLoading && !isError && (products.length > 0
